@@ -1,0 +1,13 @@
+{
+  "name": "@statescan/mongo",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "license": "Apache-2.0",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@osn/scan-common": "0.5.5",
+    "mongodb": "5.6.0"
+  }
+}

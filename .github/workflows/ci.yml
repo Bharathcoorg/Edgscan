@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+    branches: ["main", "release-*"]
+  pull_request:
+    branches: ["main", "release-*"]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set Node.js 18.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+          check-latest: true
+
+      - name: Run backend install
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install
+          dir: "backend" # will run `yarn install` in `backend` sub folder
+
+      - name: Run backend lint
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: lint
+          dir: "backend"
+
+      - name: Run backend test
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: test
+          dir: "backend"
+
+      - name: Run site install
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install
+          dir: "site" # will run `yarn install` in `site` sub folder
+
+      - name: Run site lint
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: lint
+          dir: "site"

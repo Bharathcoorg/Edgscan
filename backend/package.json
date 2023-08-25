@@ -1,0 +1,28 @@
+{
+  "name": "backend",
+  "license": "Apache-2.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "lint": "yarn lint:common && yarn lint:mongo && yarn lint:server && yarn lint:block-scan && yarn lint:runtime-scan && yarn lint:account-scan && yarn lint:asset-scan && yarn lint:uniques-scan",
+    "test": "yarn test:asset-scan && yarn test:uniques-scan && yarn test:account-scan",
+    "lint:common": "yarn workspace @statescan/common lint",
+    "lint:mongo": "yarn workspace @statescan/mongo lint",
+    "lint:server": "yarn workspace @statescan/server lint",
+    "lint:block-scan": "yarn workspace @statescan/block-scan lint",
+    "lint:runtime-scan": "yarn workspace @statescan/runtime-scan lint",
+    "lint:account-scan": "yarn workspace @statescan/account-scan lint",
+    "lint:asset-scan": "yarn workspace @statescan/asset-scan lint",
+    "lint:uniques-scan": "yarn workspace @statescan/uniques-scan lint",
+    "test:asset-scan": "yarn workspace @statescan/account-scan test",
+    "test:uniques-scan": "yarn workspace @statescan/uniques-scan test",
+    "test:account-scan": "yarn workspace @statescan/account-scan test",
+    "test:identity-scan": "yarn workspace @statescan/identity-scan test"
+  },
+  "devDependencies": {
+    "eslint": "^8.31.0"
+  },
+  "packageManager": "yarn@3.6.0"
+}

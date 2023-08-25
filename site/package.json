@@ -1,0 +1,80 @@
+{
+  "name": "site",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@osn/common": "^1.3.5",
+    "@osn/constants": "^1.1.2",
+    "@polkadot/api": "10.7.1",
+    "@polkadot/util": "12.2.1",
+    "@polkadot/util-crypto": "12.2.1",
+    "@reduxjs/toolkit": "^1.8.5",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "bignumber.js": "^9.1.1",
+    "buffer": "^6.0.3",
+    "chart.js": "^4.1.2",
+    "chartjs-adapter-moment": "^1.0.1",
+    "copy-to-clipboard": "^3.3.2",
+    "is-ipfs": "^8.0.1",
+    "is-utf8": "^0.2.1",
+    "lodash.capitalize": "^4.2.1",
+    "lodash.debounce": "^4.0.8",
+    "lodash.isnil": "^4.0.0",
+    "lodash.last": "^3.0.0",
+    "lodash.noop": "^3.0.1",
+    "lodash.omit": "^4.5.0",
+    "moment": "^2.29.4",
+    "query-string": "^7.1.1",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.1.0",
+    "react-dom": "^18.2.0",
+    "react-json-view": "^1.21.3",
+    "react-redux": "^8.0.2",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "socket.io-client": "^4.5.2",
+    "styled-components": "^5.3.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "BROWSER=none GENERATE_SOURCEMAP=false react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint src"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "rules": {
+      "no-console": "error"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^8.43.0",
+    "typescript": "4.8.4"
+  },
+  "overrides": {
+    "react-json-view": {
+      "react": "^18.0.0",
+      "react-dom": "^18.0.0"
+    }
+  },
+  "packageManager": "yarn@3.6.0"
+}
