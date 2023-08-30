@@ -51,11 +51,11 @@ const Text = styled.p`
 export default function Producer() {
   return (
     <Wrapper>
-      <Text>{`© ${new Date().getFullYear()} Statescan Explorer`}</Text>
-      <PC>
+      <Text>{`© ${new Date().getFullYear()} Edgscan Explorer`}</Text>
+      {false && <PC>
         <Text>·</Text>
-      </PC>
-      <div className="wrap-on-mobile">
+      </PC>}
+      {false && <div className="wrap-on-mobile">
         <Text>Powered by</Text>
         <a
           href="https://www.opensquare.network/"
@@ -64,7 +64,7 @@ export default function Producer() {
         >
           <StyledLogo />
         </a>
-      </div>
+      </div> }
     </Wrapper>
   );
 }

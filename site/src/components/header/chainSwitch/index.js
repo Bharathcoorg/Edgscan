@@ -9,6 +9,8 @@ import CaretRightIcon from "../../icons/caretRightIcon";
 import CaretDownIcon from "../../icons/caretDownIcon";
 import { useOnClickOutside } from "@osn/common";
 import chains from "../../../utils/consts/chains";
+import Edgeware from "../../icons/edgewareIcon";
+import EdgewareDark from "../../icons/edgewareDarkIcon";
 
 const ArrowDownIcon = styled(CaretDownIcon)`
   position: absolute;
@@ -170,7 +172,7 @@ export default function ChainSwitch() {
       {show && (
         <Options>
           <ChainGroupWrapper>
-            {chainOptions.map((chainOption) => (
+            {/* {chainOptions.map((chainOption) => (
               <ChainGroup key={chainOption.title}>
                 <ChainGroupTitle>{chainOption.title}</ChainGroupTitle>
                 <ChainGroupItems>
@@ -199,7 +201,30 @@ export default function ChainSwitch() {
                   })}
                 </ChainGroupItems>
               </ChainGroup>
-            ))}
+            ))} */}
+            <ChainGroupItem
+              href={'#/'}
+            >
+              <Edgeware style={{ width: '20px', height: '20px' }} />
+              <ChainGroupItemName>
+                <span>{"EdgWASM"}</span>
+                <ChainGroupItemCaretWrapper>
+                  <CaretRightIcon />
+                </ChainGroupItemCaretWrapper>
+              </ChainGroupItemName>
+            </ChainGroupItem>
+            <ChainGroupItem
+              href={"https://edgscan.live"}
+              target={"_blank"}
+            >
+              <EdgewareDark style={{ width: '20px', height: '20px' }} />
+              <ChainGroupItemName>
+                <span>{"EdgEVM"}</span>
+                <ChainGroupItemCaretWrapper>
+                  <CaretRightIcon />
+                </ChainGroupItemCaretWrapper>
+              </ChainGroupItemName>
+            </ChainGroupItem>
           </ChainGroupWrapper>
         </Options>
       )}

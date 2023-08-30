@@ -5,7 +5,7 @@ import Home from "./pages";
 import Block from "./pages/block";
 import Events from "./pages/events";
 import Extrinsic from "./pages/extrinsic";
-import Transfers from "./pages/transfers";
+import Transactions from "./pages/transactions";
 import Accounts from "./pages/accounts";
 import Event from "./pages/event";
 import Account from "./pages/account";
@@ -54,7 +54,7 @@ function App() {
         <Route path="/extrinsics/:id" element={<Extrinsic />} />
         <Route path="/events" element={<Events />} />
         <Route path="/events/:id" element={<Event />} />
-        <Route path="/transfers" element={<Transfers />} />
+        <Route path="/transactions" element={<Transactions />} />
         <Route path="/accounts" element={<Accounts />} />
         <Route path="/accounts/:id" element={<Account />} />
         <Route path="/calls" element={<Calls />} />

@@ -51,12 +51,12 @@ function Overview() {
           />
           <OverviewItem
             icon={<ExtrinsicsSquareIcon />}
-            label="Signed Extrinsics"
+            label="Extrinsics"
             value={currencify(overview.signedExtrinsics)}
           />
           <OverviewItem
             icon={<TransferSquareIcon />}
-            label="Transfers"
+            label="Transactions"
             value={currencify(overview.transfers)}
           />
           <OverviewItem
@@ -75,13 +75,13 @@ function Overview() {
             }
           />
 
-          {chainSetting.para && (
+          {/* {chainSetting.para && (
             <OverviewItem
               icon={<ParaIdSquareIcon />}
               label={`${chainSetting.para.relay} Para ID`}
               value={currencify(chainSetting.para.id)}
             />
-          )}
+          )} */}
 
           <OverviewItem
             icon={<HolderSquareIcon />}
@@ -89,15 +89,15 @@ function Overview() {
             value={currencify(overview.accounts)}
           />
 
-          {modules?.assets && (
+          {/* {modules?.assets && (
             <OverviewItem
               icon={<AssetSquareIcon />}
               label="Assets"
               value={currencify(overview.assets)}
             />
-          )}
+          )} */}
 
-          {modules?.uniques && (
+          {/* {modules?.uniques && (
             <>
               <OverviewItem
                 icon={<NftSquareIcon />}
@@ -114,7 +114,7 @@ function Overview() {
                 total={currencify(overview.nftInstances?.total)}
               />
             </>
-          )}
+          )} */}
         </OverviewItemsWrapper>
       </OverviewPanel>
     </StyledPanelTableWrapper>

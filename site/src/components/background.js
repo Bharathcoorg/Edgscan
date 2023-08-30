@@ -25,7 +25,7 @@ const Dot = styled.div`
     ${(p) => p.theme.fillBeta} 64.58%,
     ${(p) => p.theme.fillGamma} 100%
   );
-  mask-image: url("/imgs/pattern-dot.svg");
+  mask-color: #FFFFFF;
   mask-repeat: repeat;
 `;
 

@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { ReactComponent as Logo } from "./logo.svg";
+import { ReactComponent as Logo } from "./../icons/edgeware-dark-full.svg";
 import { Flex, FlexBetween } from "../styled/flex";
 import { Mobile, PC } from "../styled/responsive";
 import styled, { css } from "styled-components";
@@ -23,6 +23,7 @@ import { MOBILE_SIZE } from "@osn/constants";
 import { getChainModules } from "../../utils/chain";
 import { useScrollLock } from "../../utils/hooks/useScrollLock";
 import { HeaderMenuItem } from "./styled";
+import ToggleTheme from "./../footer/toggleTheme";
 
 const headerHeight = 68;
 
@@ -30,6 +31,7 @@ const StyleLogo = styled(Logo)`
   path {
     fill: ${(props) => props.theme.fontPrimary};
   }
+  max-width: 150px
 `;
 
 const Link = styled(LinkOrigin)`
@@ -131,8 +133,13 @@ export default function Header() {
               <Link to={`/`}>
                 <MenuItem>Home</MenuItem>
               </Link>
-              <SubMenu category="BlockChain" menus={menusBlockchain} />
-              {assets && <SubMenu category="Assets" menus={menusAssets} />}
+              {menusBlockchain.length > 0 && menusBlockchain.map(e => 
+                <Link key={e.name} to={`/${e.value}`}>
+                  <MenuItem>{e.name}</MenuItem>
+                </Link>
+                )}
+              {false && <SubMenu category="BlockChain" menus={menusBlockchain} />}
+              {assets && false && <SubMenu category="Assets" menus={menusAssets} />}
             </MenuWrapper>
 
             <Flex>
@@ -141,8 +148,9 @@ export default function Header() {
                   <ExploreInput small />
                 </ExploreInputPCWrapper>
               )}
-              <Flex>
+              <Flex gap={20}>
                 <ChainSwitch />
+                <ToggleTheme />
               </Flex>
             </Flex>
           </FlexBetween>

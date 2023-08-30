@@ -13,15 +13,12 @@ const Tooltip = styled(TooltipOrigin)`
 
 const IconWrapper = styled.div`
   ${flex};
-  margin-right: 16px;
-
   ${breakpoint(640, hidden)};
 `;
 
 const ContentLabel = styled.div`
-  color: ${(p) => p.theme.fontTertiary};
+  color: ${(p) => p.theme.black};
   margin: 0;
-  margin-bottom: 8px;
   ${Inter_12_500};
   display: inline-flex;
 `;
@@ -48,6 +45,16 @@ const Link = styled(ThemedLink)`
 
 const Wrapper = styled.div`
   ${flex};
+  background-color: #ebf8ff;
+    padding: 0.75rem;
+    border-radius: 12px;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    column-gap: 0.75rem;
+    row-gap: 0.5rem;
+    color: #101112;
+    position: relative;
 `;
 
 export default function OverviewItem({ icon, label, value, total, to, tip }) {
