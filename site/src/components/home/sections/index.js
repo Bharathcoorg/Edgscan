@@ -132,7 +132,7 @@ export default function Sections() {
         </Section>
 
         <Section>
-          <Title>Signed Transfers</Title>
+          <Title>Transactions</Title>
           <StyledPanel>
             <LatestTransfers transfers={transfers} loading={transfersLoading} />
             <AnchorWrapper>
@@ -177,7 +177,7 @@ export default function Sections() {
         </Section>
       )}
 
-      {modules?.assets && (
+      {modules?.assets && false && (
         <Section>
           <Title>Assets</Title>
           <StyledPanelTableWrapper
@@ -194,7 +194,7 @@ export default function Sections() {
         </Section>
       )}
 
-      {modules?.uniques && (
+      {modules?.uniques && false && (
         <Section>
           <Title>NFT</Title>
           <StyledPanelTableWrapper

@@ -14,9 +14,9 @@ export const OverviewItemsWrapper = styled.div`
   flex: 1;
   display: grid;
   flex-wrap: wrap;
-  ${gap_x(72)};
-  ${gap_y(24)};
-  ${grid_cols(4)};
+  ${gap_x(12)};
+  ${gap_y(12)};
+  ${grid_cols(5)};
 
   ${mobilecss(grid_cols(2))};
   ${smcss(grid_cols(2))}

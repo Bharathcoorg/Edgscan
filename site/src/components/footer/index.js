@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   height: 84px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
   > * {
     white-space: nowrap;
@@ -29,10 +29,10 @@ export default function Footer() {
   return (
     <Wrapper>
       <Producer />
-      <Flex gap={24}>
-        <SocialMedia />
-        <ToggleTheme />
-      </Flex>
+      {/* <Flex gap={24}> */}
+        {/* <SocialMedia /> */}
+        {/* <ToggleTheme /> */}
+      {/* </Flex> */}
     </Wrapper>
   );
 }
